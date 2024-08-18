@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    padding : 0;
+    margin : 0;
+}
+
+:root{
+    --letra1:"Montserrat", sans-serif;
+    --letra2:"Krona One", sans-serif;
+}
+
+body{
+    background-color:black;
+    color: white;
+    /*height: 100vh;*/
+    box-sizing: border-box;
+   
+}
+
+strong{
+    color: #00ffff;
+}
+
+
+
+.resalto-titulo{
+    color:white;
+    
+}
+
+
+
+.presentacion{
+    display: flex;
+    align-items: center;
+    padding: 1% 5%;
+    justify-content:space-between;
+}
+
+.presentacion_contenido{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    
+}
+
+.presentacion_contenido_titulo{
+    width: 31,25rem;
+    
+    font-size: 2,25rem;
+    font-family: var(--letra2);
+}
+
+.presentacion_contenido_texto{
+    font-size: 1rem;
+    font-family: var(--letra1);
+}
+
+
+
+.presentacion_enlaces{
+    display: flex;
+    padding: 0,625rem;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    
+}
+
+.presentacion_enlaces_subtitulo{
+    color:white;
+    font-size: 1rem;
+    font-weight: 200;
+    font-family: var(--letra2);
+    padding: 3rem;
+}
+
+.presentacion_enlaces_link{
+    width: 50%;
+    height: 1,5rem;
+    background-color:black;
+    text-align: center;
+    padding: 2rem 0,5rem;
+    border-radius: 8px;
+    font-family: var(--letra1);
+    font-size: 1,5rem;
+    font-weight: 600;
+    color:white;
+    text-decoration: none;
+    border: 2px solid #00ffff;
+    display: flex;
+    align-items:center;
+    justify-content:space-evenly;
+    gap: 1rem;
+}
+
+.presentacion_enlaces_link:hover{
+    cursor: pointer;                        /*cambia el cursor, de flecha a manito*/
+    background-color:slategrey;           /*le cambia el color de  fondo al boton */
+    padding: 8px;                          /* hace el efecto de agrandar el botón cuando pasa el cursor*/
+}
+
+.presentacion_imagen{
+    width: 50%;
+}
+
+
+.footer{
+    display: flex;
+    justify-content: center;
+    font-family:var(--letra1);
+    font: 400;
+    color: black;
+    padding:1rem;
+    background-color: aqua;
+}
+
+.header{
+    padding: 0,5rem;
+    background-color:grey;
+}
+
+.header_menu_link{
+    font-family: --letra1;
+    font: 600;
+    font-size: 1,125rem;
+    color: #00ffff;
+    
+    /*margin: 0 1px;*/
+    padding: 1rem 4rem;
+    text-decoration: none;
+}
+
+.header_menu_link:hover {
+    cursor: pointer;
+} 
+
+/*propiedad MEDIA QUERIES que efectúa el cambio de disposición de los elementos, a partir de un valor límite 
+que nosotros le indicamos.
+Siempre va al final de archivo CSS */
+
+@media (max-width: 500px){
+
+    /* aqui indicamos sobre que elementos se efectuarán los cambios*/
+    .header{
+        
+        padding:5%; /* el menú superior lo separará de la parte superior de pantalla */
+
+    }
+
+    .header_menu_link{
+        width: auto;
+        justify-content: center; /* colocará "home" y "sobre mi" en el centro de la pantalla*/
+    }
+
+    .presentacion{
+        flex-direction: column-reverse; /* colocará los elementos uno arriba del otro*/  
+    }
+    
+    .presentacion_contenido{ /* esto permitirá que todo el contenido se adapte automaticamente al tamaño de pantalla*/
+        width: auto;
+    }
+}
